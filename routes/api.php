@@ -50,6 +50,6 @@ Route::group([
 
     Route::group(['prefix' => 'courier'], function () {
         Route::get('/get-web', [OrderController::class, 'getListCourier']);
-        Route::get('/get-list-by-courier', [OrderController::class, 'getListOrderByCourier']);
+        Route::post('/get-list-by-courier', [OrderController::class, 'getListOrderByCourier']);
     });
 });
