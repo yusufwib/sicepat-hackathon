@@ -63,7 +63,7 @@ class OrderController extends Controller
 
     public function getListOrderByCourier (Request $request) {
         $res = new JsonHelper;
-        $data = Order::get();
+        $data = Order::where('id_user', auth()->user()->id)->get();
 
         foreach ($data as $k => $v) {
             $cLat = $request->input('courier_lat');
