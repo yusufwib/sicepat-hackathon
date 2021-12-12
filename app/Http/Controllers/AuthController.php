@@ -74,10 +74,10 @@ class AuthController extends Controller
                 return $res->responseGet(false, 400, null, 'Wrong email and password!');
             }
 
-            $dataUser = User::where('email', $request->input('email'))->first();
-            if ($dataUser->role_id !== 2) {
-                return $res->responseGet(false, 400, null, 'This account is not able to join!');
-            }
+            // $dataUser = User::where('email', $request->input('email'))->first();
+            // if ($dataUser->role_id !== 2) {
+            //     return $res->responseGet(false, 400, null, 'This account is not able to join!');
+            // }
 
             return $res->responseGet(true, 200, [
                 'token' => $token
