@@ -35,32 +35,32 @@ class AuthController extends Controller
     public function login(Request $request){
         $res = new JsonHelper;
 
-        if ($request->input('login_type') == 'user') {
-            $validator = Validator::make($request->all(), [
-                'phone' => 'required',
-                'password' => 'required|string|min:6',
-            ]);
+        // if ($request->input('login_type') == 'user') {
+        //     $validator = Validator::make($request->all(), [
+        //         'phone' => 'required',
+        //         'password' => 'required|string|min:6',
+        //     ]);
 
-            if ($validator->fails()) {
-                return $res->responseGet(false, 400, null, $validator->errors()->first());
-            }
+        //     if ($validator->fails()) {
+        //         return $res->responseGet(false, 400, null, $validator->errors()->first());
+        //     }
 
-            if (! $token = auth()->attempt($validator->validated())) {
-                return $res->responseGet(false, 400, null, 'Wrong phone number and password!');
-            }
+        //     if (! $token = auth()->attempt($validator->validated())) {
+        //         return $res->responseGet(false, 400, null, 'Wrong phone number and password!');
+        //     }
 
-            $dataUser = User::where('phone', $request->input('phone'))->first();
-            if ($dataUser->role_id < 3 ) {
-                return $res->responseGet(false, 400, null, 'This account is not able to join!');
-            }
+        //     $dataUser = User::where('phone', $request->input('phone'))->first();
+        //     if ($dataUser->role_id < 3 ) {
+        //         return $res->responseGet(false, 400, null, 'This account is not able to join!');
+        //     }
 
-            $validateUser = User::where('phone', $request->input('phone'))->get();
+        //     $validateUser = User::where('phone', $request->input('phone'))->get();
 
-            return $res->responseGet(true, 200, [
-                'token' => $token
-            ], 'Login success.');
-            // return $this->createNewToken($token);
-        } else if ($request->input('login_type') == 'admin') {
+        //     return $res->responseGet(true, 200, [
+        //         'token' => $token
+        //     ], 'Login success.');
+        //     // return $this->createNewToken($token);
+        // } else if ($request->input('login_type') == 'admin') {
             $validator = Validator::make($request->all(), [
                 'email' => 'required|email',
                 'password' => 'required|string|min:6',
@@ -82,63 +82,63 @@ class AuthController extends Controller
             return $res->responseGet(true, 200, [
                 'token' => $token
             ], 'Login success.');
-        } else if ($request->input('login_type') == 'jury') {
-            $validator = Validator::make($request->all(), [
-                'email' => 'required|email',
-                'password' => 'required|string|min:6',
-            ]);
+        // } else if ($request->input('login_type') == 'jury') {
+        //     $validator = Validator::make($request->all(), [
+        //         'email' => 'required|email',
+        //         'password' => 'required|string|min:6',
+        //     ]);
 
-            if ($validator->fails()) {
-                return $res->responseGet(false, 400, null, $validator->errors()->first());
-            }
+        //     if ($validator->fails()) {
+        //         return $res->responseGet(false, 400, null, $validator->errors()->first());
+        //     }
 
-            if (! $token = auth()->attempt($validator->validated())) {
-                return $res->responseGet(false, 400, null, 'Wrong email and password!');
-            }
+        //     if (! $token = auth()->attempt($validator->validated())) {
+        //         return $res->responseGet(false, 400, null, 'Wrong email and password!');
+        //     }
 
-            $dataUser = User::where('email', $request->input('email'))->first();
+        //     $dataUser = User::where('email', $request->input('email'))->first();
 
-            if ($dataUser->role_id !== 3) {
-                return $res->responseGet(false, 400, null, 'This account is not able to join!');
-            }
+        //     if ($dataUser->role_id !== 3) {
+        //         return $res->responseGet(false, 400, null, 'This account is not able to join!');
+        //     }
 
-            if ($dataUser->verified_jury == 0) {
-                return $res->responseGet(false, 400, null, 'This account is not able to join (not verified)!');
-            }
+        //     if ($dataUser->verified_jury == 0) {
+        //         return $res->responseGet(false, 400, null, 'This account is not able to join (not verified)!');
+        //     }
 
-            $isAvailRoom = DetailContestCriteriaContent::where('jury_code', $request->input('jury_code'))->get();
-            if ($isAvailRoom[0]->is_arranged == 0) {
-                return $res->responseGet(false, 400, null, 'This contest is not able to start, cause participants not have the number and block!');
-            }
-            $isRegistered = ContestJury::where('id_contest', $isAvailRoom[0]->id_contest)->get();
+        //     $isAvailRoom = DetailContestCriteriaContent::where('jury_code', $request->input('jury_code'))->get();
+        //     if ($isAvailRoom[0]->is_arranged == 0) {
+        //         return $res->responseGet(false, 400, null, 'This contest is not able to start, cause participants not have the number and block!');
+        //     }
+        //     $isRegistered = ContestJury::where('id_contest', $isAvailRoom[0]->id_contest)->get();
 
-            if (count($isRegistered) == 0) {
-                return $res->responseGet(false, 400, null, 'This account is not able to join cause this user is not registered on this contest!');
-            }
+        //     if (count($isRegistered) == 0) {
+        //         return $res->responseGet(false, 400, null, 'This account is not able to join cause this user is not registered on this contest!');
+        //     }
 
-            foreach ($isAvailRoom as $k => $v) {
-                $nameContest = Contest::where('id', $v->id_contest)->first();
-                $nameContestCriteria = DetailContestCriteria::where('id', $v->id_detail_contest_criteria)->first();
+        //     foreach ($isAvailRoom as $k => $v) {
+        //         $nameContest = Contest::where('id', $v->id_contest)->first();
+        //         $nameContestCriteria = DetailContestCriteria::where('id', $v->id_detail_contest_criteria)->first();
 
-                $isAvailRoom[0]->contest_name = $nameContest->name;
-                $isAvailRoom[0]->criteria_name = $nameContestCriteria->criteria_name;
-                $isAvailRoom[0]->jury_name = $dataUser->name;
-            }
-            $isReadyToJugde = Contest::where('id', $v->id_contest)->first();
+        //         $isAvailRoom[0]->contest_name = $nameContest->name;
+        //         $isAvailRoom[0]->criteria_name = $nameContestCriteria->criteria_name;
+        //         $isAvailRoom[0]->jury_name = $dataUser->name;
+        //     }
+        //     $isReadyToJugde = Contest::where('id', $v->id_contest)->first();
 
-            // if ((int)$isReadyToJugde->ready_to_jugde == 0) {
-            //     return $res->responseGet(false, 400, null, 'Contest is not ready to judge (block is not set)!');
-            // }
+        //     // if ((int)$isReadyToJugde->ready_to_jugde == 0) {
+        //     //     return $res->responseGet(false, 400, null, 'Contest is not ready to judge (block is not set)!');
+        //     // }
 
-            if (count($isAvailRoom) == 0) {
-                return $res->responseGet(false, 400, null, 'Jury code not found!');
-            }
+        //     if (count($isAvailRoom) == 0) {
+        //         return $res->responseGet(false, 400, null, 'Jury code not found!');
+        //     }
 
-            return $res->responseGet(true, 200, [
-                'token' => $token,
-                'room' => $isAvailRoom[0]
-            ], 'Login success.');
-        }
+        //     return $res->responseGet(true, 200, [
+        //         'token' => $token,
+        //         'room' => $isAvailRoom[0]
+        //     ], 'Login success.');
+        // }
     }
 
     /**
