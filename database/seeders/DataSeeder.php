@@ -17,6 +17,7 @@ class DataSeeder extends Seeder
     {
         User::insert([
             'name' => 'Pablo Escobar',
+            'email' => 'kurir-1@sicepat.com',
             'password' => bcrypt('password123'), //password123
             'phone' => '+6281334958665'
         ]);
@@ -24,14 +25,14 @@ class DataSeeder extends Seeder
         User::insert([
             'name' => 'Imanuel Wanggai',
             'password' => bcrypt('password123'), //password123
-            'email' => 'admin-escobar@mail.com',
+            'email' => 'kurir-2@sicepat.com',
             'phone' => '+6281334958665'
         ]);
 
         User::insert([
             'name' => 'Sunarto',
             'password' => bcrypt('password123'), //password123
-            'email' => 'jury-escobar@mail.com',
+            'email' => 'kurir-3@sicepat.com',
             'phone' => '+6281334958665'
         ]);
 
