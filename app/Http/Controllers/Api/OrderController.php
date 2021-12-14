@@ -62,7 +62,7 @@ class OrderController extends Controller
             $cLng = $request->input('courier_lng');
 
             $distanceBetween = $this->distance($v->lat, $v->lng, $v->lat, $v->lng);
-            $data[$k]->distance = round($distanceBetween, 3);
+            $data[$k]->distance = round($distanceBetween, 2);
         }
         $dataArr = json_decode( preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $data), true );
 
@@ -83,12 +83,16 @@ class OrderController extends Controller
         $res = new JsonHelper;
         $data = Order::where('id_user', auth()->user()->id)->get();
 
+        $mapsLink = "https://www.google.com/maps/dir/$cLat,$cLng/";
+
         foreach ($data as $k => $v) {
             $cLat = $request->input('courier_lat');
             $cLng = $request->input('courier_lng');
 
             $distanceBetween = $this->distance($cLat, $cLng, $v->lat, $v->lng);
-            $data[$k]->distance = round($distanceBetween, 3);
+            $data[$k]->distance = round($distanceBetween, 2);
+
+            $mapsLink += "$v->lat, $v->lng/";
         }
 
         $dataArr = json_decode( preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $data), true );
@@ -97,7 +101,12 @@ class OrderController extends Controller
             return strcmp($a['distance'], $b['distance']);
         });
 
-        return $res->responseGet(true, 200, $dataArr, '');
+        $responses = [
+            'maps-link' => $mapsLink,
+            'list-package' => $dataArr
+        ];
+
+        return $res->responseGet(true, 200, $responses, '');
     }
 
     public function assignCourier(Request $request) {
