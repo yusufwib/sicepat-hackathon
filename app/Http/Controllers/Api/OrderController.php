@@ -101,8 +101,8 @@ class OrderController extends Controller
         });
 
         $responses = [
-            'maps-link' => $mapsLink,
-            'list-package' => $dataArr
+            'maps_link' => $mapsLink,
+            'list_package' => $dataArr
         ];
 
         return $res->responseGet(true, 200, $responses, '');
