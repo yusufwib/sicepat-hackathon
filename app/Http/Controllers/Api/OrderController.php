@@ -82,12 +82,11 @@ class OrderController extends Controller
     public function getListOrderByCourier (Request $request) {
         $res = new JsonHelper;
         $data = Order::where('id_user', auth()->user()->id)->get();
-
+        $cLat = $request->input('courier_lat');
+        $cLng = $request->input('courier_lng');
         $mapsLink = "https://www.google.com/maps/dir/$cLat,$cLng/";
 
         foreach ($data as $k => $v) {
-            $cLat = $request->input('courier_lat');
-            $cLng = $request->input('courier_lng');
 
             $distanceBetween = $this->distance($cLat, $cLng, $v->lat, $v->lng);
             $data[$k]->distance = round($distanceBetween, 2);
