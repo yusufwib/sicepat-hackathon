@@ -42,9 +42,9 @@ class DataSeeder extends Seeder
                 'receiver_phone' => '+6281334958665',
                 'receiver_name' => 'Yusuf Wibisono',
                 'resi' => '00224049041' . $i,
-            'address' => 'Gang Mawar 3 No.32B RW.11 Rt.07, Rw. Buaya, Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11740',
-                'lat' => '-6.1611191',
-                'lng' => '106.747075',
+            'address' => 'Jl. Raya Duri Kosambi No.09, RW.1, Duri Kosambi, Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11750',
+                'lat' => '-6.164711029198638',
+                'lng' => '106.72373489209119',
                 'status' => 'inactive'
             ]);
 
@@ -62,9 +62,9 @@ class DataSeeder extends Seeder
                 'receiver_phone' => '+6281334958665',
                 'receiver_name' => 'Kenzi Nugroho',
                 'resi' => '00224049041'  . $i,
-                'address' => 'Jl. Basmol Raya No.161, RT.8/RW.4, Kembangan Utara, Kec. Kembangan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11610',
-                'lat' => '-6.163248600973038',
-                'lng' => '106.75060469073325',
+                'address' => 'Jalan Utan Jati No.109 RT.09, kel, RT.3/RW.11, Pegadungan, Kec. Kalideres, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11840',
+                'lat' => '-6.146700719981047',
+                'lng' => '106.71357295564368',
                 'status' => 'inactive'
             ]);
 
@@ -72,9 +72,9 @@ class DataSeeder extends Seeder
                 'receiver_phone' => '+6281334958665',
                 'receiver_name' => 'Kevin Lee',
                 'resi' => '00224049041' . $i,
-                'address' => 'Jl. Kp. Salo No.3C, RT.8/RW.4, Kembangan Utara, Kec. Kembangan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11610',
-                'lat' => '-6.162680570336961',
-                'lng' => '106.75276665985642',
+                'address' => 'Jl. Ruko Mutiara Palem Raya No.6, RW.14, Cengkareng Tim., Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11730',
+                'lat' => '-6.137036400151968',
+                'lng' => '106.73555366600293',
                 'status' => 'inactive'
             ]);
 
@@ -82,9 +82,9 @@ class DataSeeder extends Seeder
                 'receiver_phone' => '+6281334958665',
                 'receiver_name' => 'Dodit Malang',
                 'resi' => '00224049041' . $i,
-                'address' => 'Jl. Taman Kota No.33, RT.11/RW.5, Kembangan Utara, Kec. Kembangan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11610',
-                'lat' => '-6.15982079279637',
-                'lng' => '106.7536373708936',
+                'address' => 'Jalan Jelambar, Jl. Kemanggisan, Jl. Jelambar Utama III No.16C, RT.4/RW.8, Jelambar, Kec. Grogol petamburan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11460',
+                'lat' => '-6.151422994248313',
+                'lng' => '106.78205557083328',
                 'status' => 'inactive'
             ]);
 
@@ -92,9 +92,9 @@ class DataSeeder extends Seeder
                 'receiver_phone' => '+6281334958665',
                 'receiver_name' => 'Mila Klaten',
                 'resi' => '00224049041' . $i,
-                'address' => 'Jl. Perumahan Taman Kota Blok E6 No.34, RT:013 RW:005 Kel, RT.13/RW.5, Kembangan Utara, Kec. Kembangan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11610',
-                'lat' => '-6.1612164206430355',
-                'lng' => '106.7547184310191',
+                'address' => 'AKR Tower, Jl. Perjuangan No.5, RT.11/RW.10, Kb. Jeruk, Kec. Kb. Jeruk, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11530',
+                'lat' => '-6.188730745045583',
+                'lng' => '106.76804084102365',
                 'status' => 'inactive'
             ]);
 
