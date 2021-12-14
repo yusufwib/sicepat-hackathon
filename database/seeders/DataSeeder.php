@@ -52,9 +52,9 @@ class DataSeeder extends Seeder
                 'receiver_phone' => '+6281334958665',
                 'receiver_name' => 'Agus Susanto',
                 'resi' => '00224049041' . $i,
-                'address' => 'Jl. Tanggul, RT.7/RW.11, Rw. Buaya, Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11740',
-                'lat' => '-6.1606542',
-                'lng' => '106.7469884',
+                'address' => 'Jl. Kacang Panjang V No.3, RT.8/RW.7, Rw. Buaya, Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11740',
+                'lat' => '-6.16360932882379',
+                'lng' => '106.74284460197445',
                 'status' => 'inactive'
             ]);
 
@@ -62,9 +62,9 @@ class DataSeeder extends Seeder
                 'receiver_phone' => '+6281334958665',
                 'receiver_name' => 'Kenzi Nugroho',
                 'resi' => '00224049041'  . $i,
-                'address' => 'Jl. Kembangan Baru, RT.10/RW.6, Rw. Buaya, Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11740',
-                'lat' => '-6.1605926',
-                'lng' => '106.7467264',
+                'address' => 'Jl. Basmol Raya No.161, RT.8/RW.4, Kembangan Utara, Kec. Kembangan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11610',
+                'lat' => '-6.163248600973038',
+                'lng' => '106.75060469073325',
                 'status' => 'inactive'
             ]);
 
@@ -72,9 +72,9 @@ class DataSeeder extends Seeder
                 'receiver_phone' => '+6281334958665',
                 'receiver_name' => 'Kevin Lee',
                 'resi' => '00224049041' . $i,
-                'address' => 'Jl. Cemp. I No.39, RW.11, Rw. Buaya, Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11740',
-                'lat' => '-6.1609683',
-                'lng' => '106.7469906',
+                'address' => 'Jl. Kp. Salo No.3C, RT.8/RW.4, Kembangan Utara, Kec. Kembangan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11610',
+                'lat' => '-6.162680570336961',
+                'lng' => '106.75276665985642',
                 'status' => 'inactive'
             ]);
 
@@ -82,9 +82,9 @@ class DataSeeder extends Seeder
                 'receiver_phone' => '+6281334958665',
                 'receiver_name' => 'Dodit Malang',
                 'resi' => '00224049041' . $i,
-                'address' => 'Jl. Cemp. 4 No.80, RT.3/RW.11, Rw. Buaya, Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11740',
-                'lat' => '-6.1611221',
-                'lng' => '106.7468971',
+                'address' => 'Jl. Taman Kota No.33, RT.11/RW.5, Kembangan Utara, Kec. Kembangan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11610',
+                'lat' => '-6.15982079279637',
+                'lng' => '106.7536373708936',
                 'status' => 'inactive'
             ]);
 
@@ -92,9 +92,9 @@ class DataSeeder extends Seeder
                 'receiver_phone' => '+6281334958665',
                 'receiver_name' => 'Mila Klaten',
                 'resi' => '00224049041' . $i,
-                'address' => 'Jl. Cempaka Raya No.6, RT.11/RW.11, Rawa Buaya, Cengkareng, West Jakarta City, Jakarta 11740',
-                'lat' => '-6.1615179',
-                'lng' => '106.7464062',
+                'address' => 'Jl. Perumahan Taman Kota Blok E6 No.34, RT:013 RW:005 Kel, RT.13/RW.5, Kembangan Utara, Kec. Kembangan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11610',
+                'lat' => '-6.1612164206430355',
+                'lng' => '106.7547184310191',
                 'status' => 'inactive'
             ]);
 
@@ -102,9 +102,9 @@ class DataSeeder extends Seeder
                 'receiver_phone' => '+6281334958665',
                 'receiver_name' => 'Agus PDAM',
                 'resi' => '00224049041' . $i,
-                'address' => 'Jl. Klingkit timur rt.006/012 no.26, RT.6/RW.12, Rw. Buaya, Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11740',
-                'lat' => '-6.1620572',
-                'lng' => '106.7469614',
+                'address' => 'Jl Green Gdn Residence No.8, RT.3/RW.4, Kembangan Utara, Kec. Kembangan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11520',
+                'lat' => '-6.162579224134279',
+                'lng' => '106.75592638045728',
                 'status' => 'inactive'
             ]);
         }
