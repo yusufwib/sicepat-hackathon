@@ -91,7 +91,7 @@ class OrderController extends Controller
             $distanceBetween = $this->distance($cLat, $cLng, $v->lat, $v->lng);
             $data[$k]->distance = round($distanceBetween, 2);
 
-            $mapsLink += "$v->lat, $v->lng/";
+            $mapsLink .= "$v->lat, $v->lng/";
         }
 
         $dataArr = json_decode( preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $data), true );
