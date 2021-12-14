@@ -155,7 +155,7 @@
                     {
                         data: null,
                         render: function (data, type, row, meta) {
-                            return `${row.street} ${row.street_no}, ${row.district}, ${row.city}, ${row.province}, ${row.postal_code}.`
+                            return `${row.address}`
                         }
                     },
                     {
