@@ -36,213 +36,78 @@ class DataSeeder extends Seeder
             'phone' => '+6281334958665'
         ]);
 
-        Order::insert([
-            'receiver_phone' => '+6281334958665',
-            'receiver_name' => 'Yusuf Wibisono',
-            'resi' => 'JP111100022222',
-            'street' => 'Jl Tanjung Putra Yudha III',
-            'street_no' => '11',
-            'district' => 'Kec. Tanjungrejo',
-            'city' => 'Kota Malang',
-            'province' => 'Jawa Timur',
-            'rt' => '001',
-            'rw' => '004',
-            'postal_code' => '65164',
-            'lat' => '3',
-            'lng' => '2',
-            'status' => 'inactive'
-        ]);
-        Order::insert([
-            'receiver_phone' => '+6281334958665',
-            'receiver_name' => 'Yusuf Wibisono',
-            'resi' => 'JP111100022222',
-            'street' => 'Jl Tanjung Putra Yudha III',
-            'street_no' => '11',
-            'district' => 'Kec. Tanjungrejo',
-            'city' => 'Kota Malang',
-            'province' => 'Jawa Timur',
-            'rt' => '001',
-            'rw' => '004',
-            'postal_code' => '65164',
-            'lat' => '3',
-            'lng' => '2',
-            'status' => 'inactive'
-        ]);
-        Order::insert([
-            'receiver_phone' => '+6281334958665',
-            'receiver_name' => 'Yusuf Wibisono',
-            'resi' => 'JP111100022222',
-            'street' => 'Jl Tanjung Putra Yudha III',
-            'street_no' => '11',
-            'district' => 'Kec. Tanjungrejo',
-            'city' => 'Kota Malang',
-            'province' => 'Jawa Timur',
-            'rt' => '001',
-            'rw' => '004',
-            'postal_code' => '65164',
-            'lat' => '3',
-            'lng' => '2',
-            'status' => 'inactive'
-        ]);
-        Order::insert([
-            'receiver_phone' => '+6281334958665',
-            'receiver_name' => 'Yusuf Wibisono',
-            'resi' => 'JP111100022222',
-            'street' => 'Jl Tanjung Putra Yudha III',
-            'street_no' => '11',
-            'district' => 'Kec. Tanjungrejo',
-            'city' => 'Kota Malang',
-            'province' => 'Jawa Timur',
-            'rt' => '001',
-            'rw' => '004',
-            'postal_code' => '65164',
-            'lat' => '3',
-            'lng' => '2',
-            'status' => 'inactive'
-        ]);
-        Order::insert([
-            'receiver_phone' => '+6281334958665',
-            'receiver_name' => 'Yusuf Wibisono',
-            'resi' => 'JP111100022222',
-            'street' => 'Jl Tanjung Putra Yudha III',
-            'street_no' => '11',
-            'district' => 'Kec. Tanjungrejo',
-            'city' => 'Kota Malang',
-            'province' => 'Jawa Timur',
-            'rt' => '001',
-            'rw' => '004',
-            'postal_code' => '65164',
-            'lat' => '3',
-            'lng' => '2',
-            'status' => 'inactive'
-        ]);
-        Order::insert([
-            'receiver_phone' => '+6281334958665',
-            'receiver_name' => 'Yusuf Wibisono',
-            'resi' => 'JP111100022222',
-            'street' => 'Jl Tanjung Putra Yudha III',
-            'street_no' => '11',
-            'district' => 'Kec. Tanjungrejo',
-            'city' => 'Kota Malang',
-            'province' => 'Jawa Timur',
-            'rt' => '001',
-            'rw' => '004',
-            'postal_code' => '65164',
-            'lat' => '3',
-            'lng' => '2',
-            'status' => 'inactive'
-        ]);
-        Order::insert([
-            'receiver_phone' => '+6281334958665',
-            'receiver_name' => 'Yusuf Wibisono',
-            'resi' => 'JP111100022222',
-            'street' => 'Jl Tanjung Putra Yudha III',
-            'street_no' => '11',
-            'district' => 'Kec. Tanjungrejo',
-            'city' => 'Kota Malang',
-            'province' => 'Jawa Timur',
-            'rt' => '001',
-            'rw' => '004',
-            'postal_code' => '65164',
-            'lat' => '3',
-            'lng' => '2',
-            'status' => 'inactive'
-        ]);
-        Order::insert([
-            'receiver_phone' => '+6281334958665',
-            'receiver_name' => 'Yusuf Wibisono',
-            'resi' => 'JP111100022222',
-            'street' => 'Jl Tanjung Putra Yudha III',
-            'street_no' => '11',
-            'district' => 'Kec. Tanjungrejo',
-            'city' => 'Kota Malang',
-            'province' => 'Jawa Timur',
-            'rt' => '001',
-            'rw' => '004',
-            'postal_code' => '65164',
-            'lat' => '3',
-            'lng' => '2',
-            'status' => 'inactive'
-        ]);
-        Order::insert([
-            'receiver_phone' => '+6281334958665',
-            'receiver_name' => 'Yusuf Wibisono',
-            'resi' => 'JP111100022222',
-            'street' => 'Jl Tanjung Putra Yudha III',
-            'street_no' => '11',
-            'district' => 'Kec. Tanjungrejo',
-            'city' => 'Kota Malang',
-            'province' => 'Jawa Timur',
-            'rt' => '001',
-            'rw' => '004',
-            'postal_code' => '65164',
-            'lat' => '3',
-            'lng' => '2',
-            'status' => 'inactive'
-        ]);
-        Order::insert([
-            'receiver_phone' => '+6281334958665',
-            'receiver_name' => 'Yusuf Wibisono',
-            'resi' => 'JP111100022222',
-            'street' => 'Jl Tanjung Putra Yudha III',
-            'street_no' => '11',
-            'district' => 'Kec. Tanjungrejo',
-            'city' => 'Kota Malang',
-            'province' => 'Jawa Timur',
-            'rt' => '001',
-            'rw' => '004',
-            'postal_code' => '65164',
-            'lat' => '3',
-            'lng' => '2',
-            'status' => 'inactive'
-        ]);
-        Order::insert([
-            'receiver_phone' => '+6281334958665',
-            'receiver_name' => 'Yusuf Wibisono',
-            'resi' => 'JP111100022222',
-            'street' => 'Jl Tanjung Putra Yudha III',
-            'street_no' => '11',
-            'district' => 'Kec. Tanjungrejo',
-            'city' => 'Kota Malang',
-            'province' => 'Jawa Timur',
-            'rt' => '001',
-            'rw' => '004',
-            'postal_code' => '65164',
-            'lat' => '3',
-            'lng' => '2',
-            'status' => 'inactive'
-        ]);
-        Order::insert([
-            'receiver_phone' => '+6281334958665',
-            'receiver_name' => 'Yusuf Wibisono',
-            'resi' => 'JP111100022222',
-            'street' => 'Jl Tanjung Putra Yudha III',
-            'street_no' => '11',
-            'district' => 'Kec. Tanjungrejo',
-            'city' => 'Kota Malang',
-            'province' => 'Jawa Timur',
-            'rt' => '001',
-            'rw' => '004',
-            'postal_code' => '65164',
-            'lat' => '3',
-            'lng' => '2',
-            'status' => 'inactive'
-        ]);
-        Order::insert([
-            'receiver_phone' => '+6281334958665',
-            'receiver_name' => 'Yusuf Wibisono',
-            'resi' => 'JP111100022222',
-            'street' => 'Jl Tanjung Putra Yudha III',
-            'street_no' => '11',
-            'district' => 'Kec. Tanjungrejo',
-            'city' => 'Kota Malang',
-            'province' => 'Jawa Timur',
-            'rt' => '001',
-            'rw' => '004',
-            'postal_code' => '65164',
-            'lat' => '3',
-            'lng' => '2',
-            'status' => 'inactive'
-        ]);
+        for ($i=0; $i < 3; $i++) {
+
+            Order::insert([
+                'receiver_phone' => '+6281334958665',
+                'receiver_name' => 'Yusuf Wibisono',
+                'resi' => '00224049041' . $i,
+            'address' => 'Gang Mawar 3 No.32B RW.11 Rt.07, Rw. Buaya, Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11740',
+                'lat' => '-6.1611191',
+                'lng' => '106.747075',
+                'status' => 'inactive'
+            ]);
+
+            Order::insert([
+                'receiver_phone' => '+6281334958665',
+                'receiver_name' => 'Agus Susanto',
+                'resi' => '00224049041' . $i,
+                'address' => 'Jl. Tanggul, RT.7/RW.11, Rw. Buaya, Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11740',
+                'lat' => '-6.1606542',
+                'lng' => '106.7469884',
+                'status' => 'inactive'
+            ]);
+
+            Order::insert([
+                'receiver_phone' => '+6281334958665',
+                'receiver_name' => 'Kenzi Nugroho',
+                'resi' => '00224049041'  . $i,
+                'address' => 'Jl. Kembangan Baru, RT.10/RW.6, Rw. Buaya, Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11740',
+                'lat' => '-6.1605926',
+                'lng' => '106.7467264',
+                'status' => 'inactive'
+            ]);
+
+            Order::insert([
+                'receiver_phone' => '+6281334958665',
+                'receiver_name' => 'Kevin Lee',
+                'resi' => '00224049041' . $i,
+                'address' => 'Jl. Cemp. I No.39, RW.11, Rw. Buaya, Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11740',
+                'lat' => '-6.1609683',
+                'lng' => '106.7469906',
+                'status' => 'inactive'
+            ]);
+
+            Order::insert([
+                'receiver_phone' => '+6281334958665',
+                'receiver_name' => 'Dodit Malang',
+                'resi' => '00224049041' . $i,
+                'address' => 'Jl. Cemp. 4 No.80, RT.3/RW.11, Rw. Buaya, Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11740',
+                'lat' => '-6.1611221',
+                'lng' => '106.7468971',
+                'status' => 'inactive'
+            ]);
+
+            Order::insert([
+                'receiver_phone' => '+6281334958665',
+                'receiver_name' => 'Mila Klaten',
+                'resi' => '00224049041' . $i,
+                'address' => 'Jl. Cempaka Raya No.6, RT.11/RW.11, Rawa Buaya, Cengkareng, West Jakarta City, Jakarta 11740',
+                'lat' => '-6.1615179',
+                'lng' => '106.7464062',
+                'status' => 'inactive'
+            ]);
+
+            Order::insert([
+                'receiver_phone' => '+6281334958665',
+                'receiver_name' => 'Agus PDAM',
+                'resi' => '00224049041' . $i,
+                'address' => 'Jl. Klingkit timur rt.006/012 no.26, RT.6/RW.12, Rw. Buaya, Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11740',
+                'lat' => '-6.1620572',
+                'lng' => '106.7469614',
+                'status' => 'inactive'
+            ]);
+        }
+
     }
 }

@@ -19,14 +19,7 @@ class CreateOrdersTable extends Migration
             $table->string('receiver_name');
             $table->string('receiver_phone');
             $table->string('resi');
-            $table->string('street');
-            $table->string('street_no')->nullable();
-            $table->string('district');
-            $table->string('city');
-            $table->string('province');
-            $table->string('rt')->nullable();
-            $table->string('rw')->nullable();
-            $table->string('postal_code');
+            $table->string('address');
             $table->string('lat')->nullable();
             $table->string('lng')->nullable();
             $table->string('received_date')->nullable();
