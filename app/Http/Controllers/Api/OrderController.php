@@ -62,7 +62,7 @@ class OrderController extends Controller
             $cLng = $request->input('courier_lng');
 
             $distanceBetween = $this->distance($v->lat, $v->lng, $v->lat, $v->lng);
-            $data[$k]->distance = substr((string)$distanceBetween, 0, 3);
+            $data[$k]->distance = round($distanceBetween, 3);
         }
         $dataArr = json_decode( preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $data), true );
 
@@ -88,7 +88,7 @@ class OrderController extends Controller
             $cLng = $request->input('courier_lng');
 
             $distanceBetween = $this->distance($cLat, $cLng, $v->lat, $v->lng);
-            $data[$k]->distance = substr((string)$distanceBetween, 0, 3);
+            $data[$k]->distance = round($distanceBetween, 3);
         }
 
         $dataArr = json_decode( preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $data), true );
