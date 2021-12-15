@@ -179,6 +179,15 @@ class DataSeeder extends Seeder
                 'status' => 'inactive'
             ]);
 
+            Order::insert([
+                'receiver_phone' => '+6281334958665',
+                'receiver_name' => 'Jiohan Sebastian',
+                'resi' => 'JP111100022222',
+               'address' => 'Jl. Hanoman II No. 20, Bojong Indah, Cengkareng, RT.2/RW.9, Rawa Buaya, Cengkareng, RT.2/RW.9, Rawa Buaya, Cengkareng, Jakarta, 11740',
+
+                'status' => 'inactive'
+            ]);
+
         }
 
     }
