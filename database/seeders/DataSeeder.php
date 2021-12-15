@@ -36,7 +36,7 @@ class DataSeeder extends Seeder
             'phone' => '+6281334958665'
         ]);
 
-        for ($i=0; $i < 3; $i++) {
+        for ($i=0; $i < 1; $i++) {
 
             // Order::insert([
             //     'receiver_phone' => '+6281334958665',
@@ -112,7 +112,7 @@ class DataSeeder extends Seeder
             Order::insert([
                 'receiver_phone' => '+6281334958665',
                 'receiver_name' => 'Andik Suharto',
-                'resi' => 'JP111100022222',
+                 'resi' => '00224049041' . $i,
                'address' => 'Jl. Bojong Raya No.1, RT.10/RW.1, Rw. Buaya, Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11740',
                 'lat' => '-6.1615468',
                 'lng' => '106.7332261',
@@ -120,9 +120,9 @@ class DataSeeder extends Seeder
             ]);
 
     Order::insert([
-                'receiver_phone' => '+6281334958665',
+                'receiver_phone' => '+6285790905725',
                 'receiver_name' => 'Andres Kartono',
-                'resi' => 'JP111100022222',
+                 'resi' => '00224049041' . $i,
                'address' => 'Jl. Bojong Indah Raya No.17, RT.6/RW.04, Rw. Buaya, Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11740',
                 'lat' => '-6.1608947',
                 'lng' => '106.7469884',
@@ -130,9 +130,9 @@ class DataSeeder extends Seeder
             ]);
 
     Order::insert([
-                'receiver_phone' => '+6281334958665',
+                'receiver_phone' => '+6281334958665X',
                 'receiver_name' => 'Caroline',
-                'resi' => 'JP111100022222',
+                 'resi' => '00224049041' . $i,
                'address' => '8, Jl. Belimbing Raya No.10, RW.5, Rw. Buaya, Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11740',
                 'lat' => '-6.1609926',
                 'lng' => '106.7374519',
@@ -140,9 +140,9 @@ class DataSeeder extends Seeder
             ]);
 
     Order::insert([
-                'receiver_phone' => '+6281334958665',
+                'receiver_phone' => '+6281334958665X',
                 'receiver_name' => 'Dicky Kurniawan',
-                'resi' => 'JP111100022222',
+                 'resi' => '00224049041' . $i,
                'address' => 'Pagar Silver, Jl. Belimbing Raya No.55, RW.6, Rw. Buaya, Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11740',
                 'lat' => '-6.1619922',
                 'lng' => '106.7378156',
@@ -150,9 +150,9 @@ class DataSeeder extends Seeder
             ]);
 
     Order::insert([
-                'receiver_phone' => '+6281334958665',
+                'receiver_phone' => '+6281334958665X',
                 'receiver_name' => 'Gunawan Jusuf',
-                'resi' => 'JP111100022222',
+                 'resi' => '00224049041' . $i,
                'address' => 'Jl. Manggis Raya No.54, RT.1/RW.8, Rw. Buaya, Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11740',
                 'lat' => '-6.1638457',
                 'lng' => '106.7373954',
@@ -160,9 +160,9 @@ class DataSeeder extends Seeder
             ]);
 
     Order::insert([
-                'receiver_phone' => '+6281334958665',
+                'receiver_phone' => '+6281334958665X',
                 'receiver_name' => 'Indra Gunawan',
-                'resi' => 'JP111100022222',
+                 'resi' => '00224049041' . $i,
                'address' => 'Jl. Jagung Raya No.6, RT.13/RW.8, Rw. Buaya, Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11740',
                 'lat' => '-6.1653552',
                 'lng' => '106.7373837',
@@ -170,9 +170,9 @@ class DataSeeder extends Seeder
             ]);
 
     Order::insert([
-                'receiver_phone' => '+6281334958665',
+                'receiver_phone' => '+6281334958665X',
                 'receiver_name' => 'Jiohan Sebastian',
-                'resi' => 'JP111100022222',
+                 'resi' => '00224049041' . $i,
                'address' => 'Jl. Hanoman I No. 29, Bojong Indah, Cengkareng, RT.2/RW.9, Rawa Buaya, Cengkareng, RT.2/RW.9, Rawa Buaya, Cengkareng, Jakarta, 11740',
                 'lat' => '-6.1665572',
                 'lng' => '106.7371267',
@@ -180,9 +180,9 @@ class DataSeeder extends Seeder
             ]);
 
             Order::insert([
-                'receiver_phone' => '+6281334958665',
+                'receiver_phone' => '+6281334958665X',
                 'receiver_name' => 'Jiohan Sebastian',
-                'resi' => 'JP111100022222',
+                 'resi' => '00224049041' . $i,
                'address' => 'Jl. Hanoman II No. 20, Bojong Indah, Cengkareng, RT.2/RW.9, Rawa Buaya, Cengkareng, RT.2/RW.9, Rawa Buaya, Cengkareng, Jakarta, 11740',
 
                 'status' => 'inactive'

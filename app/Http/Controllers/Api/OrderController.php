@@ -26,7 +26,7 @@ class OrderController extends Controller
 
         return ($miles * 1.609344);
     }
-    private function sendWhatsappNotificationConfirm(string $recipient, string $resi, string $courier_name)
+    private function sendWhatsappNotificationConfirm(string $recipient, string $resi, string $courier_name, string $phoneNumber)
     {
         $url = "https://sendtalk-api.taptalk.io/api/v1/message/send_whatsapp";
         $header = array(
@@ -34,7 +34,7 @@ class OrderController extends Controller
             'API-key: 797ddd68908bae79b19e0909e2520a142d4961b2cc5ed1981a6aab29f593d8d8'
         );
         $data = json_encode(array(
-            'phone' => $recipient,
+            'phone' => $phoneNumber,
             'messageType' => 'text',
             'body' => "===PAKET SEDANG MENUJU RUMAHMU===\n\nYth $recipient,\nPaketmu dengan No. resi $resi sedang dikirim ke alamat pengiriman oleh $courier_name. Pastikan anda bersedia untuk menerima paket dari kurir.\nTerima Kasih"
         ));
@@ -148,7 +148,7 @@ class OrderController extends Controller
 
                 $nameCourier = User::where('id', $v)->first();
                 // $iterate++;
-                $this->sendWhatsappNotificationConfirm($listPackage[$i]->receiver_name, $listPackage[$i]->resi, $nameCourier->name);
+                $this->sendWhatsappNotificationConfirm($listPackage[$i]->receiver_name, $listPackage[$i]->resi, $nameCourier->name, $listPackage[$i]->receiver_phone);
             }
         }
 
