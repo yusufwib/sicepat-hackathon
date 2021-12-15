@@ -118,31 +118,20 @@ class OrderController extends Controller
             ));
             // data=%20%7B%22sourceDate%22%3A%222021-09-15%22%2C%20%22produksi%22%3Atrue%2C%20%22debit%22%3Atrue%2C%0A%22elevasi%22%3Atrue%7D
 
-            $response = curl_exec($curl);
-            $err = curl_error($curl);
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
 
-            curl_close($curl);
-        // $ch = curl_init();
-        // curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-        // curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($dataPost));
-        // curl_setopt($ch, CURLOPT_HEADER, true);
-        // curl_setopt($ch, CURLOPT_HTTPHEADER,
-        //     array(
-        //         'Content-Type:application/json',
-        //         'Content-Length: ' . strlen($data_string)
-        //     )
-        // );
+        curl_close($curl);
 
-        // $result = curl_exec($ch);
-        // curl_close($ch);
+        $responseData = json_decode( preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $response), true );
 
-        foreach ($data as $k => $v) {
+        foreach ($responseData->data as $k => $v) {
             $mapsLink .= "$v->lat,$v->lng/";
         }
 
         $responses = [
             'maps_link' => $mapsLink,
-            'list_package' => $response
+            'list_package' => $responseData->data
         ];
 
         return $res->responseGet(true, 200, $responses, '');
