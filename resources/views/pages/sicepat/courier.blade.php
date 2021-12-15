@@ -53,10 +53,6 @@
 </style>
 @endsection
 
-@section('action-button')
-<button class="button button-info button-lg button-outline" onclick="window.print()">ASSIGN TO COURIER</button>
-@endsection
-
 @section('contents')
 <div class="col-12 mb-30">
     <div class="box">
