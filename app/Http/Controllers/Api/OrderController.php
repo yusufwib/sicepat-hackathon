@@ -79,6 +79,8 @@ class OrderController extends Controller
         return $res->responseGet(true, 200, $data, '');
     }
 
+
+
     public function getListOrderByCourier (Request $request) {
         $res = new JsonHelper;
         $data = Order::where('id_user', auth()->user()->id)->get();
@@ -88,21 +90,45 @@ class OrderController extends Controller
 
         foreach ($data as $k => $v) {
 
-            $distanceBetween = $this->distance($cLat, $cLng, $v->lat, $v->lng);
-            $data[$k]->distance = round($distanceBetween, 2);
+            // $distanceBetween = $this->distance($cLat, $cLng, $v->lat, $v->lng);
+            // $data[$k]->distance = round($distanceBetween, 2);
 
             $mapsLink .= "$v->lat,$v->lng/";
         }
-
         $dataArr = json_decode( preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $data), true );
 
-        usort($dataArr, function($a, $b) {
-            return strcmp($a['distance'], $b['distance']);
-        });
+        $url = 'https://qd1x9juhfb.execute-api.ap-southeast-1.amazonaws.com/default/sortDistancePackage';
+        $data = [
+            'courier' => [
+                'lat' => $cLat,
+                'lng' => $cLng
+            ],
+            'data' => $dataArr
+        ];
+        $data_string = json_encode($data);
+        $ch=curl_init($url);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_decode($data));
+        curl_setopt($ch, CURLOPT_HEADER, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER,
+            array(
+                'Content-Type:application/json',
+                'Content-Length: ' . strlen($data_string)
+            )
+        );
+
+        $result = curl_exec($ch);
+        curl_close($ch);
+
+
+
+        // usort($dataArr, function($a, $b) {
+        //     return strcmp($a['distance'], $b['distance']);
+        // });
 
         $responses = [
             'maps_link' => $mapsLink,
-            'list_package' => $dataArr
+            'list_package' => $result
         ];
 
         return $res->responseGet(true, 200, $responses, '');
