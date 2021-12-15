@@ -1,6 +1,6 @@
 /* SIDEBAR COLOR ACTIVE */
 .side-header-menu > ul > li.active > a, .side-header-menu > ul > li:hover > a{
-    color: #F68800;
+    color: #d5232b;
 }
 .side-header-menu > ul > li > a::before {
     content: "";
@@ -9,11 +9,11 @@
     top: 0;
     height: 100%;
     width: 0;
-    background-color: #F68800;
+    background-color: #d5232b;
 }
 
 .side-header-sub-menu li.active > a, .side-header-sub-menu li:hover > a {
-   color: #F68800;
+   color: #d5232b;
 }
 
 .side-header-sub-menu > li > a::before {
@@ -23,7 +23,7 @@
     top: 0;
     height: 100%;
     width: 0;
-    background-color: #F68800;
+    background-color: #d5232b;
 }
 
 /* SELECT */
@@ -153,7 +153,7 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background-color: #F68800;
+    background-color: #d5232b;
     opacity: 0.6;
     position: absolute;
     top: 0;
