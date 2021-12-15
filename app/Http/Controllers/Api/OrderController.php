@@ -114,7 +114,9 @@ class OrderController extends Controller
         $responseData = json_decode( preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $response), true );
 
         foreach ($responseData['data'] as $k => $v) {
-            $mapsLink .= $v['lat'] . ',' . $v['lng'] . '/';
+            if (isset($v['lat'])) {
+                $mapsLink .= $v['lat'] . ',' . $v['lng'] . '/';
+            }
         }
 
         $responses = [
