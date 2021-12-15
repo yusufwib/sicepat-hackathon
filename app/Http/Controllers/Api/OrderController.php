@@ -64,7 +64,7 @@ class OrderController extends Controller
             $distanceBetween = $this->distance($v->lat, $v->lng, $v->lat, $v->lng);
             $data[$k]->distance = round($distanceBetween, 2);
         }
-        // $dataArr = json_decode( preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $data), true );
+        $dataArr = json_decode( preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $data), true );
 
         // usort($dataArr, function($a, $b) {
         //     return strcmp($a['distance'], $b['distance']);
