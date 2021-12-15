@@ -43,7 +43,7 @@
                                         </a>
 
                                         <!-- Dropdown -->
-                                        <div class="adomx-dropdown-menu dropdown-menu-user">
+                                        <!-- <div class="adomx-dropdown-menu dropdown-menu-user">
                                             <div class="head">
                                                 <h5 class="name"></h5>
                                                 <div class="mail"></div>
@@ -53,7 +53,7 @@
                                                     <li><a id="btn-logout"><i class="zmdi zmdi-lock-open"></i>Sing out</a></li>
                                                 </ul>
                                             </div>
-                                        </div>
+                                        </div> -->
 
                                     </li>
 
