@@ -51,8 +51,8 @@ class DataSeeder extends Seeder
             Order::insert([
                'receiver_phone' => '+6285790905725',
                 'receiver_name' => 'Agus Susanto',
-                'resi' => '00224049041' . $i,
-                'address' => 'Jl. Kacang Panjang V No.3, RT.8/RW.7, Rw. Buaya, Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11740',
+                'resi' => '00224049041' . $i + 1,
+                'address' => '8, RW.7, Rawa Buaya, Cengkareng, West Jakarta City, Jakarta',
                 'lat' => '-6.16360932882379',
                 'lng' => '106.74284460197445',
                 'status' => 'inactive'
@@ -61,7 +61,7 @@ class DataSeeder extends Seeder
             Order::insert([
                 'receiver_phone' => '+6281334958665X',
                 'receiver_name' => 'Kenzi Nugroho',
-                'resi' => '00224049041'  . $i,
+                'resi' => '00224049041'  . $i + 2,
                 'address' => 'Jalan Utan Jati No.109 RT.09, kel, RT.3/RW.11, Pegadungan, Kec. Kalideres, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11840',
                 'lat' => '-6.146700719981047',
                 'lng' => '106.71357295564368',
@@ -71,7 +71,7 @@ class DataSeeder extends Seeder
             Order::insert([
                 'receiver_phone' => '+6281334958665X',
                 'receiver_name' => 'Kevin Lee',
-                'resi' => '00224049041' . $i,
+                'resi' => '00224049041' . $i + 3,
                 'address' => 'Jl. Ruko Mutiara Palem Raya No.6, RW.14, Cengkareng Tim., Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11730',
                 'lat' => '-6.137036400151968',
                 'lng' => '106.73555366600293',
@@ -81,7 +81,7 @@ class DataSeeder extends Seeder
             Order::insert([
                 'receiver_phone' => '+6281334958665X',
                 'receiver_name' => 'Dodit Malang',
-                'resi' => '00224049041' . $i,
+                'resi' => '00224049041' . $i + 4,
                 'address' => 'Jalan Jelambar, Jl. Kemanggisan, Jl. Jelambar Utama III No.16C, RT.4/RW.8, Jelambar, Kec. Grogol petamburan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11460',
                 'lat' => '-6.151422994248313',
                 'lng' => '106.78205557083328',
@@ -91,7 +91,7 @@ class DataSeeder extends Seeder
             Order::insert([
                 'receiver_phone' => '+6281334958665X',
                 'receiver_name' => 'Mila Klaten',
-                'resi' => '00224049041' . $i,
+                'resi' => '00224049041' . $i + 5,
                 'address' => 'AKR Tower, Jl. Perjuangan No.5, RT.11/RW.10, Kb. Jeruk, Kec. Kb. Jeruk, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11530',
                 'lat' => '-6.188730745045583',
                 'lng' => '106.76804084102365',
@@ -101,7 +101,7 @@ class DataSeeder extends Seeder
             Order::insert([
                 'receiver_phone' => '+6281334958665X',
                 'receiver_name' => 'Agus PDAM',
-                'resi' => '00224049041' . $i,
+                'resi' => '00224049041' . $i + 6,
                 'address' => 'Jl Green Gdn Residence No.8, RT.3/RW.4, Kembangan Utara, Kec. Kembangan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11520',
                 'lat' => '-6.162579224134279',
                 'lng' => '106.75592638045728',
@@ -111,7 +111,7 @@ class DataSeeder extends Seeder
             Order::insert([
                 'receiver_phone' => '+6281334958665X',
                 'receiver_name' => 'Jiohan Sebastian',
-                 'resi' => '00224049041' . $i,
+                 'resi' => '00224049041' . $i + 7,
                'address' => 'Jl. Hanoman II No. 20, Bojong Indah, Cengkareng, RT.2/RW.9, Rawa Buaya, Cengkareng, RT.2/RW.9, Rawa Buaya, Cengkareng, Jakarta, 11740',
                 'status' => 'inactive'
             ]);
