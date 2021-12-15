@@ -56,19 +56,7 @@ class OrderController extends Controller
         $res = new JsonHelper;
         $data = Order::select('orders.*', 'users.name as courier_name')
         ->leftJoin('users', 'orders.id_user', '=', 'users.id')
-        ->  get();
-        foreach ($data as $k => $v) {
-            $cLat = $request->input('courier_lat');
-            $cLng = $request->input('courier_lng');
-
-            $distanceBetween = $this->distance($v->lat, $v->lng, $v->lat, $v->lng);
-            $data[$k]->distance = round($distanceBetween, 2);
-        }
-        $dataArr = json_decode( preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $data), true );
-
-        // usort($dataArr, function($a, $b) {
-        //     return strcmp($a['distance'], $b['distance']);
-        // });
+        ->get();
         return $res->responseGet(true, 200, $data, '');
     }
 
