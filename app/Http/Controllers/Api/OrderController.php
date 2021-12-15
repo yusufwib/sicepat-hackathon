@@ -113,15 +113,13 @@ class OrderController extends Controller
         $result = curl_exec($ch);
         curl_close($ch);
 
-        return $result;
-
         foreach ($data as $k => $v) {
             $mapsLink .= "$v->lat,$v->lng/";
         }
 
         $responses = [
             'maps_link' => $mapsLink,
-            'list_package' => $result
+            // 'list_package' => $result
         ];
 
         return $res->responseGet(true, 200, $responses, '');
