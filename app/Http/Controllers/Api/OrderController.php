@@ -88,27 +88,20 @@ class OrderController extends Controller
         $cLng = $request->input('courier_lng');
         $mapsLink = "https://www.google.com/maps/dir/$cLat,$cLng/";
 
-        foreach ($data as $k => $v) {
-
-            // $distanceBetween = $this->distance($cLat, $cLng, $v->lat, $v->lng);
-            // $data[$k]->distance = round($distanceBetween, 2);
-
-            $mapsLink .= "$v->lat,$v->lng/";
-        }
         $dataArr = json_decode( preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $data), true );
 
         $url = 'https://qd1x9juhfb.execute-api.ap-southeast-1.amazonaws.com/default/sortDistancePackage';
-        $data = [
+        $dataPost = [
             'courier' => [
                 'lat' => $cLat,
                 'lng' => $cLng
             ],
             'data' => $dataArr
         ];
-        $data_string = json_encode($data);
-        $ch=curl_init($url);
+        $data_string = json_encode($dataPost);
+        $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($dataPost));
         curl_setopt($ch, CURLOPT_HEADER, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER,
             array(
@@ -120,11 +113,11 @@ class OrderController extends Controller
         $result = curl_exec($ch);
         curl_close($ch);
 
+        return $result;
 
-
-        // usort($dataArr, function($a, $b) {
-        //     return strcmp($a['distance'], $b['distance']);
-        // });
+        foreach ($data as $k => $v) {
+            $mapsLink .= "$v->lat,$v->lng/";
+        }
 
         $responses = [
             'maps_link' => $mapsLink,
