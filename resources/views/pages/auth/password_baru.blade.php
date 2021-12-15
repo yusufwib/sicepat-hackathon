@@ -9,7 +9,6 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/images/logo/icon.png')}}">
     <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>
     <script>
         var base_url = window.location.origin;
