@@ -1,4 +1,4 @@
-@extends('layout.index', ['title' => 'Dashboard', 'heading' => 'Dashboard'])
+@extends('layout.index', ['title' => 'Courier', 'heading' => 'Courier'])
 
 @section('css')
 <style>
@@ -57,7 +57,7 @@
 <div class="col-12 mb-30">
     <div class="box">
         <div class="box-head">
-            <h3 class="title">Order List</h3>
+            <h3 class="title">Courier List</h3>
         </div>
         <div class="box-body">
             <table class="table table-bordered data-table" id="table-data">
